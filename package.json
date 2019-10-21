@@ -15,15 +15,16 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/katsutanabe/burger/issues"
+    "url": "https://github.com/katsutanabe/Burger/issues"
   },
-  "homepage": "https://github.com/katsutanabe/burger#readme",
+  "homepage": "https://github.com/katsutanabe/Burger#readme",
   "dependencies": {
-    "body-parser": "^1.17.1",
-    "express": "^4.15.2",
-    "express-handlebars": "^3.0.0",
-    "method-override": "^2.3.8",
-    "mysql": "^2.13.0"
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "method-override": "^2.3.10",
+    "mysql": "^2.17.1",
+    "node": "^12.12.0"
   },
   "engines": {
     "node": "7.8.0"

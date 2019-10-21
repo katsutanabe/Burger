@@ -1,2 +1,2 @@
 # burger
-Creating a Burger app for restaurant
+Creating a Burger app for restaurant (project/homework)
