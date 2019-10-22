@@ -1,4 +1,4 @@
-const log = console.log;
+//const log = console.log;
 
 const burgerTemplate = (burgerName, id, is_favorite) => {
     const burgerContainer = $('<div>').attr({
