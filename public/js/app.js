@@ -14,7 +14,7 @@ const burgerTemplate = (burgerName, id, is_favorite) => {
     });
 
     name.html(burgerName);
-    button.html('add to favorite');
+    button.html('Devour it !');
 
     burgerContainer.append(img, name, button);
     return burgerContainer;

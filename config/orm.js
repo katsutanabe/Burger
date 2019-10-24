@@ -2,20 +2,20 @@ const connection = require("./connection");
 
 const orm = {
     selectAll: function (cb) {
-        connection.query("SELECT * FROM restaurant_burger", function (err, data) {
+        connection.query("SELECT * FROM burgers", function (err, data) {
             if (err) return cb(err, null);
             cb(null, data);
         });
     },
     selectAllBy: function(condition, value, cb) {
-        const sqlQuery = `SELECT * FROM restaurant_burger WHERE ${condition } = ${value}`;
+        const sqlQuery = `SELECT * FROM burgers WHERE ${condition } = ${value}`;
         connection.query(sqlQuery, function (err, data) {
             if (err) return cb(err, null);
             cb(null, data)
         });
     },
     insertOne: function (burgerName, cb) {
-        const sqlQuery = `INSERT INTO restaurant_burger(burger_name) VALUES('${burgerName}')`;
+        const sqlQuery = `INSERT INTO burgers(burger_name) VALUES('${burgerName}')`;
         connection.query(sqlQuery, function (err, data) {
             if (err) return cb(err, null);
             cb(null, data);
@@ -23,7 +23,7 @@ const orm = {
     },
 
     updateOne: function (condition, id, cb) {
-        const sqlQuery = `UPDATE restaurant_burger SET is_favorite = ${condition} WHERE id = ${id}`;
+        const sqlQuery = `UPDATE burgers SET is_favorite = ${condition} WHERE id = ${id}`;
         connection.query(sqlQuery, function (err, data) {
             if (err)  return cb(err, null);
             cb(null, data)
@@ -31,7 +31,7 @@ const orm = {
     },
 
     deleteOne: function(id, cb) {
-        const sqlQuery = `DELETE FROM restaurant_burger WHERE id = ${id}`;
+        const sqlQuery = `DELETE FROM burgers WHERE id = ${id}`;
         connection.query(sqlQuery, function (err, data) {
             if (err) return cb(err, null);
             cb(null, data)

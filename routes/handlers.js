@@ -4,8 +4,10 @@ const router = express.Router();
 const orm = require("../config/orm");
 
 router.get("/", function (req, res) {
+    console.log('Hit')
     orm.selectAllBy('is_favorite', false, function (error, result) {
         if (error) {
+            console.log(error)
             return res.render('error');
         }
         res.render("index", { result: result, style: 'index', title: 'Burger App' });
